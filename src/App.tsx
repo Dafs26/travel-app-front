@@ -1,5 +1,11 @@
 import React from "react";
-import { Routes, Route, useNavigate, useParams } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  useNavigate,
+  useParams,
+  useHref,
+} from "react-router-dom";
 import { Continente } from "./types";
 import { CONTINENTES } from "./data/continentes";
 import Header from "./components/Header";
@@ -10,8 +16,22 @@ import Footer from "./components/Footer";
 import CircuitosPage from "./pages/CircuitosPage";
 import OfertasPage from "./pages/OfertasPage";
 import NosotrosPage from "./pages/NosotrosPage";
-import ContactoPage from "./pages/ContactoPage";
+import ContactoPage from "./pages/whatsappContacto";
 import "./index.css";
+import Carousel from "./components/carouselNew";
+
+// const ContactoPage = () => {
+//   const telefono = "34629656149";
+//   const mensaje = encodeURIComponent("Hola, quiero más información");
+//   return (
+//     <a
+//       href={`https://wa.me/${telefono}?text=${mensaje}`}
+//       target="_blank"
+//       rel="noopener noreferrer"
+//       className="btn-whatsapp"
+//     ></a>
+//   );
+// };
 
 /* ─── Layout: Header + Footer siempre visibles ─── */
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
@@ -32,7 +52,7 @@ const HomePage: React.FC = () => {
   return (
     <>
       <HeroSection />
-      <ContinentCarousel onSelect={handleSelect} />
+      <Carousel onSelect={handleSelect} />
       <FeatureStrip />
     </>
   );

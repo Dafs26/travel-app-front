@@ -25,7 +25,7 @@
 }
 
 .eyebrow::before {
-  content: '';
+  content: "";
   width: 32px;
   height: 2px;
   background: var(--ft-coral);
@@ -45,7 +45,7 @@
   color: var(--ft-coral);
   font-style: italic;
   font-weight: 400;
-  font-family: 'Georgia', serif;
+  font-family: "Georgia", serif;
 }
 
 .controls {
@@ -82,7 +82,9 @@
 }
 
 /* Track */
-.trackWrap { overflow: hidden; }
+.trackWrap {
+  overflow: hidden;
+}
 
 .track {
   display: flex;
@@ -98,7 +100,9 @@
   background: var(--ft-white);
   box-shadow: var(--shadow-md);
   cursor: pointer;
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
   display: flex;
   flex-direction: column;
 }
@@ -121,12 +125,14 @@
   transition: transform 0.7s ease;
 }
 
-.card:hover .cardImg { transform: scale(1.07); }
+.card:hover .cardImg {
+  transform: scale(1.07);
+}
 
 .cardOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, transparent 40%, rgba(13,31,60,0.55) 100%);
+  background: linear-gradient(to bottom, transparent 40%);
 }
 
 .cardEmoji {
@@ -134,7 +140,7 @@
   top: 16px;
   right: 16px;
   font-size: 28px;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
 /* Card body */
@@ -202,9 +208,15 @@
   transition: gap var(--transition);
 }
 
-.card:hover .cardCta { gap: 12px; }
-.arrow { transition: transform var(--transition); }
-.card:hover .arrow { transform: translateX(4px); }
+.card:hover .cardCta {
+  gap: 12px;
+}
+.arrow {
+  transition: transform var(--transition);
+}
+.card:hover .arrow {
+  transform: translateX(4px);
+}
 
 /* Dots */
 .dots {

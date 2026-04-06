@@ -3,7 +3,8 @@ import { Viaje } from "../types";
 import { destinoImages } from "../data/continentes";
 import styles from "./TripCard.module.css";
 
-const FALLBACK = "https://images.unsplash.com/photo-1488085061387-422e29b40080?w=600&q=70";
+const FALLBACK =
+  "https://images.unsplash.com/photo-1488085061387-422e29b40080?w=600&q=70";
 
 const tipoLabel: Record<string, string> = {
   plaza_a_plaza_en_grupo: "En grupo",
@@ -28,15 +29,20 @@ const TripCard: React.FC<Props> = ({ viaje }) => {
   return (
     <article className={styles.card}>
       <div className={styles.imgWrap}>
-        <img src={img} alt={viaje.nombre} loading="lazy" className={styles.img} />
+        <img
+          src={img}
+          alt={viaje.nombre}
+          loading="lazy"
+          className={styles.img}
+        />
         {tipo && (
-          <span className={`${styles.badge} ${styles[tipoClass[tipo] ?? "grupo"]}`}>
+          <span
+            className={`${styles.badge} ${styles[tipoClass[tipo] ?? "grupo"]}`}
+          >
             {tipoLabel[tipo] ?? tipo}
           </span>
         )}
-        {viaje.dias && (
-          <span className={styles.days}>{viaje.dias} días</span>
-        )}
+        {viaje.dias && <span className={styles.days}>{viaje.dias} días</span>}
       </div>
       <div className={styles.body}>
         <h4 className={styles.name}>{viaje.nombre}</h4>
@@ -44,8 +50,18 @@ const TripCard: React.FC<Props> = ({ viaje }) => {
           {viaje.ciudadSalida && (
             <span className={styles.meta}>
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                <path d="M6 1a3.5 3.5 0 0 1 3.5 3.5C9.5 7.5 6 11 6 11S2.5 7.5 2.5 4.5A3.5 3.5 0 0 1 6 1z" stroke="currentColor" strokeWidth="1.2"/>
-                <circle cx="6" cy="4.5" r="1.2" stroke="currentColor" strokeWidth="1.2"/>
+                <path
+                  d="M6 1a3.5 3.5 0 0 1 3.5 3.5C9.5 7.5 6 11 6 11S2.5 7.5 2.5 4.5A3.5 3.5 0 0 1 6 1z"
+                  stroke="currentColor"
+                  strokeWidth="1.2"
+                />
+                <circle
+                  cx="6"
+                  cy="4.5"
+                  r="1.2"
+                  stroke="currentColor"
+                  strokeWidth="1.2"
+                />
               </svg>
               {viaje.ciudadSalida}
             </span>
@@ -53,18 +69,23 @@ const TripCard: React.FC<Props> = ({ viaje }) => {
           {viaje.mes && (
             <span className={styles.meta}>
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                <rect x="1" y="2.5" width="10" height="8.5" rx="1.5" stroke="currentColor" strokeWidth="1.2"/>
-                <path d="M1 5h10M4 1v3M8 1v3" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
+                <rect
+                  x="1"
+                  y="2.5"
+                  width="10"
+                  height="8.5"
+                  rx="1.5"
+                  stroke="currentColor"
+                  strokeWidth="1.2"
+                />
+                <path
+                  d="M1 5h10M4 1v3M8 1v3"
+                  stroke="currentColor"
+                  strokeWidth="1.2"
+                  strokeLinecap="round"
+                />
               </svg>
               {viaje.mes}
-            </span>
-          )}
-          {viaje.proveedor && (
-            <span className={styles.meta}>
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                <path d="M6 1l1.5 3H11L8.25 6.25l1 3.25L6 7.75 2.75 9.5l1-3.25L1 4H4.5z" stroke="currentColor" strokeWidth="1.1"/>
-              </svg>
-              {viaje.proveedor}
             </span>
           )}
         </div>
@@ -80,7 +101,7 @@ const TripCard: React.FC<Props> = ({ viaje }) => {
           ) : (
             <div className={styles.priceConsult}>Consultar precio</div>
           )}
-          <button className={styles.cta}>Ver más →</button>
+          {/* <button className={styles.cta}>Ver más →</button> */}
         </div>
       </div>
     </article>
