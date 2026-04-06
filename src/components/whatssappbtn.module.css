@@ -1,0 +1,42 @@
+/* Contenedor principal */
+.whatsapp-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+/* El botón circular */
+.whatsapp-link {
+  display: flex;
+  align-items: center; /* Centrado vertical */
+  justify-content: center; /* Centrado horizontal */
+  gap: 12px; /* Espacio entre el SVG y el Texto */
+  padding: 12px 25px; /* Espacio interno para que respire */
+  text-decoration: none;
+  width: 100%;
+}
+
+.whatsapp-link:hover {
+  background-color: #128c7e;
+}
+
+.whatsapp-motion-wrapper {
+  background-color: #25d366;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.btn-text {
+  color: white; /* O el color que prefieras */
+  font-family: var(--font-body);
+  font-size: 18px; /* 30px era demasiado grande para un botón */
+  font-weight: 600;
+  line-height: 1; /* Evita espacios extra arriba/abajo */
+  white-space: nowrap; /* Evita que el texto se parta en dos líneas */
+}

@@ -1,16 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Outfit:wght@300;400;500;600&display=swap");
 
 /* ─── FriendlyTrips Color Palette ─── */
+/* color principal1 003650 azul */
+/* color principal2 ffce00 amarillo*/
+/* color principal3 f5ede0 blanco*/
+/* color principal3 f5ede0 azul claro*/
+
 :root {
-  --ft-navy: #0d1f3c;
+  --ft-navy: #003650;
   --ft-navy-light: #1a2e4a;
-  --ft-coral: rgb(255, 206, 0);
-  --ft-coral-dark: rgb(231, 187, 8);
-  --ft-coral-soft: #f5efb8;
+  --ft-coral: #ffce00;
+  --ft-coral-dark: #ffce00;
+  --ft-coral-soft: #f5ede0;
   --ft-cream: #faf7f2;
   --ft-cream-dark: #f0ebe3;
   --ft-sand: #e8e0d5;
-  --ft-white: #ffffff;
+  --ft-white: #f5ede0;
   --ft-text: #1a1a2a;
   --ft-muted: #6b7280;
   --ft-muted-light: #9ca3af;

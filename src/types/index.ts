@@ -16,8 +16,8 @@ export interface Viaje {
   ciudadSalida: string | null;
   precioHabDoble: number | null;
   precioIndividual: number | null;
-  proveedor: string | null;
-  linkWeb?: string | null;
+  // proveedor: string | null;
+  // linkWeb?: string | null;
   activo: boolean;
 }
 

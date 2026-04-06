@@ -6,6 +6,8 @@ import ContinentCarousel from "./components/ContinentCarousel";
 import ContinentPage from "./components/ContinentPage";
 import Footer from "./components/Footer";
 import "./index.css";
+// import WhatsappBtn from "./components/whatssappbtn";
+import Carousel from "./components/carouselNew";
 
 type View = { type: "home" } | { type: "continent"; continent: Continente };
 
@@ -29,7 +31,7 @@ const App: React.FC = () => {
       {view.type === "home" && (
         <main>
           <HeroSection />
-          <ContinentCarousel onSelect={handleSelectContinent} />
+          <Carousel onSelect={handleSelectContinent} />
           <FeatureStrip />
         </main>
       )}
@@ -43,7 +45,7 @@ const App: React.FC = () => {
           />
         </main>
       )}
-
+      {/* <WhatsappBtn /> */}
       <Footer />
     </>
   );
@@ -100,7 +102,7 @@ const FeatureStrip: React.FC = () => (
               fontFamily: "var(--font-display)",
               fontSize: 15,
               fontWeight: 700,
-              color: "#fff",
+              color: "#f5ede0",
               letterSpacing: "-0.2px",
             }}
           >
