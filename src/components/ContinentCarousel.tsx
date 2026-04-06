@@ -3,7 +3,7 @@ import { Continente } from "../types";
 import { continenteMeta, CONTINENTES } from "../data/continentes";
 import { viajes } from "../data/viajes";
 import styles from "./ContinentCarousel.module.css";
-
+import { useWindowSize } from "../hooks/useWindowSize";
 interface Props {
   onSelect: (c: Continente) => void;
 }
@@ -11,7 +11,8 @@ interface Props {
 const ContinentCarousel: React.FC<Props> = ({ onSelect }) => {
   const trackRef = useRef<HTMLDivElement>(null);
   const [offset, setOffset] = useState(0);
-  const visible = 3;
+  const { width } = useWindowSize();
+  const visible = width >= 1024 ? 3 : width >= 768 ? 2 : 1;
 
   const countFor = (c: string) => viajes.filter((v) => v.continente === c).length;
   const minPriceFor = (c: string) => {

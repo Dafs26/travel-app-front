@@ -7,7 +7,8 @@ export const continenteMeta: Record<string, ContinenteInfo> = {
     description:
       "Desde los fiordos noruegos hasta las playas mediterráneas, Europa despliega siglos de historia, arquitectura monumental y gastronomía irresistible en cada esquina.",
     heroImage:
-      "https://images.unsplash.com/photo-1471874708586-a6a5b1af35b4?w=1600&q=80",
+      //"https://images.unsplash.com/photo-1471874708586-a6a5b1af35b4?w=1600&q=80",
+      "https://images.unsplash.com/photo-1608817576203-3c27ed168bd2?q=80&w=5504",
     carouselImage:
       "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800&q=75",
     accentColor: "#3a7bd5",
