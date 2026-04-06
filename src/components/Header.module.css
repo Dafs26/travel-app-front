@@ -3,8 +3,7 @@
   top: 0;
   z-index: 200;
   background: var(--ft-navy);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .inner {
@@ -17,7 +16,7 @@
   justify-content: space-between;
 }
 
-/* Logo — ahora es un <Link> */
+/* Logo */
 .logo {
   display: flex;
   align-items: baseline;
@@ -45,35 +44,153 @@
 .nav {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 4px;
 }
 
 .navLink {
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.3px;
-  color: rgba(255,255,255,0.65);
-  transition: color var(--transition);
+  color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 100px;
+  transition:
+    color var(--transition),
+    background var(--transition);
 }
 
-.navLink:hover  { color: #fff; }
+.navLink:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
 
-.navLinkActive  { color: #fff !important; }
+.navLinkActive {
+  color: #fff;
+  background: rgba(245, 247, 135, 0.877);
+  font-weight: bold;
+}
 
-/* CTA button */
+/* CTA Contacto — estilos propios, sin !important */
 .ctaBtn {
-  background: var(--ft-coral) !important;
-  color: #fff !important;
+  background: var(--ft-coral);
+  color: #fff;
   padding: 8px 20px;
   border-radius: 100px;
-  font-weight: 600 !important;
-  font-size: 12px !important;
+  font-weight: 600;
+  font-size: 12px;
   letter-spacing: 0.5px;
-  transition: background var(--transition) !important;
+  margin-left: 8px;
+  transition: background var(--transition);
 }
 
-.ctaBtn:hover { background: var(--ft-coral-dark) !important; }
+.ctaBtn:hover {
+  background: var(--ft-coral-dark);
+  color: #fff;
+}
+
+.ctaBtnActive {
+  background: var(--ft-coral-dark);
+  color: #fff;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 6px;
+  border-radius: 6px;
+  transition: background var(--transition);
+}
+
+.hamburger:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 2px;
+  transition: all 0.25s ease;
+  transform-origin: center;
+}
+
+.hamburgerOpen span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.hamburgerOpen span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.hamburgerOpen span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile menu */
+.mobileMenu {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: var(--ft-navy);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.35s ease,
+    padding 0.35s ease;
+}
+
+.mobileMenuOpen {
+  max-height: 400px;
+  padding: 12px 20px 20px;
+}
+
+.mobileLink {
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  padding: 11px 16px;
+  border-radius: var(--radius-sm);
+  transition:
+    color var(--transition),
+    background var(--transition);
+}
+
+.mobileLink:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.mobileLinkActive {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.mobileLinkCta {
+  background: var(--ft-coral);
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.mobileLinkCta:hover {
+  background: var(--ft-coral-dark);
+  color: #fff;
+}
+
+/* mobileLinkActive sobre mobileLinkCta — oscurece levemente */
+.mobileLinkCta.mobileLinkActive {
+  background: var(--ft-coral-dark);
+}
 
 /* ── Tablet ── */
 @media (max-width: 768px) {
@@ -81,17 +198,25 @@
     padding: 0 20px;
     height: 60px;
   }
-  .nav { gap: 16px; }
-  .navLink:not(.ctaBtn) { display: none; }
+  .nav {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .mobileMenu {
+    display: flex;
+  }
   .logoMain,
-  .logoAccent { font-size: 16px; }
+  .logoAccent {
+    font-size: 16px;
+  }
 }
 
 /* ── Móvil ── */
 @media (max-width: 480px) {
-  .inner { padding: 0 16px; height: 56px; }
-  .ctaBtn {
-    padding: 7px 14px !important;
-    font-size: 11px !important;
+  .inner {
+    padding: 0 16px;
+    height: 56px;
   }
 }
