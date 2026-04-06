@@ -138,18 +138,13 @@
     padding: 48px 24px 40px;
     gap: 32px;
   }
-<<<<<<< HEAD
-=======
   .brand {
     grid-column: 1 / -1;
   }
->>>>>>> 3064fb0a1b57d345cdc0ee302c33cc2bd9d88c2f
   .bottom {
     padding: 20px 24px;
     flex-direction: column;
     gap: 12px;
-<<<<<<< HEAD
-=======
     text-align: center;
   }
   .legal {
@@ -194,6 +189,5 @@
   }
   .legal {
     gap: 16px;
->>>>>>> 3064fb0a1b57d345cdc0ee302c33cc2bd9d88c2f
   }
 }
