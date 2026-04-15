@@ -2,6 +2,9 @@ export type Tipologia =
   | "plaza_a_plaza_en_grupo"
   | "plaza_a_plaza"
   | "cupo"
+  | "grupo"
+  | "singles"
+  | "viaje_dinamico"
   | null;
 
 export type Continente = "EUROPA" | "ASIA" | "AFRICA" | "AMERICA";

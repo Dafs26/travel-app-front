@@ -214,7 +214,7 @@ export const viajes2: Viaje[] = [
     mes: 'Agosto',
     ciudadSalida: 'Madrid',
     precioHabDoble: 2910,
-    precioIndividual: '',
+    precioIndividual: null,
     activo: true
   },
   {
@@ -436,7 +436,7 @@ export const viajes2: Viaje[] = [
   {
     continente: 'EUROPA',
     nombre: 'Grecia',
-    tipologia: 'grupo ',
+    tipologia: 'grupo',
     dias: 8,
     fechas: 'Abril hasta 2028',
     mes: 'Todo el año',
@@ -448,7 +448,7 @@ export const viajes2: Viaje[] = [
   {
     continente: 'EUROPA',
     nombre: 'Grecia Milenaria',
-    tipologia: 'grupo ',
+    tipologia: 'grupo',
     dias: 6,
     fechas: 'Abri a Octubre 2026',
     mes: 'Todo el año',
@@ -646,7 +646,7 @@ export const viajes2: Viaje[] = [
     mes: 'Junio y Julio',
     ciudadSalida: 'Madrid',
     precioHabDoble: 1999,
-    precioIndividual: '',
+    precioIndividual: null,
     activo: true
   },
   {
@@ -700,7 +700,7 @@ export const viajes2: Viaje[] = [
   {
     continente: 'ASIA',
     nombre: 'SRI LANKA SORPRENDENTE Y MALDIVAS',
-    tipologia: 'grupo ',
+    tipologia: 'grupo',
     dias: 14,
     fechas: '27 de julio /3,10,17 de Agosto ',
     mes: 'Julio y Agosto',
@@ -754,7 +754,7 @@ export const viajes2: Viaje[] = [
     mes: 'Septiembre',
     ciudadSalida: 'Madrid',
     precioHabDoble: 3970,
-    precioIndividual: 'No tiene',
+    precioIndividual: null,
     activo: true
   },
   {
@@ -826,7 +826,7 @@ export const viajes2: Viaje[] = [
     mes: 'Agosto',
     ciudadSalida: 'Valencia',
     precioHabDoble: 5420,
-    precioIndividual: 'No tiene',
+    precioIndividual: null,
     activo: true
   },
   {
@@ -844,7 +844,7 @@ export const viajes2: Viaje[] = [
   {
     continente: 'AFRICA',
     nombre: 'Safari Kilimanjaro         (vuelos dinámicos)   ',
-    tipologia: 'grupo ',
+    tipologia: 'grupo',
     dias: 9,
     fechas: 'De Enero a Diciembre, todos los Lunes y Martes',
     mes: 'Todo el año',
@@ -910,7 +910,7 @@ export const viajes2: Viaje[] = [
     mes: 'Septiembre y Octubre',
     ciudadSalida: 'Madrid',
     precioHabDoble: 3000,
-    precioIndividual: '3690€ Solo hay dos plazas individuales disponibles',
+    precioIndividual: 3690,
     activo: true
   },
   {
