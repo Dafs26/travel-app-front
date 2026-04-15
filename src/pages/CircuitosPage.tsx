@@ -10,7 +10,8 @@ const FALLBACK = "https://images.unsplash.com/photo-1488085061387-422e29b40080?w
 const TIPO_LABEL: Record<string, string> = {
   plaza_a_plaza_en_grupo: "En grupo",
   cupo: "Cupo",
-  plaza_a_plaza: "A medida",
+  plaza_a_plaza: "En grupo",
+  viaje_dinamico: "A medida",
 };
 
 const CircuitosPage: React.FC = () => {

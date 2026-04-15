@@ -508,7 +508,7 @@ export const viajes: Viaje[] = [
   {
     continente: 'EUROPA',
     nombre: 'Portugal',
-    tipologia: 'viaje_dinamico',
+    tipologia: 'plaza_a_plaza',
     dias: 8,
     fechas: 'De Abril a Noviembre. Los Lunes',
     mes: 'Todo el año',
